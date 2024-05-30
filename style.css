@@ -58,6 +58,7 @@ a:hover {
   min-height: 100vh;
   overflow: visible;
   max-height: fit-content;
+  align-items: center;
 }
 
 .article {
@@ -656,4 +657,19 @@ input[type="password"] {
   transform: scale(1.1) rotate(10deg);
   opacity: 0.8;
   cursor: pointer;
+}
+
+/* Add Animation */
+#transformElement {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%); /* Initially move the image off-screen */
+}
+
+.animate img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.animate.active img {
+  opacity: 1;
 }

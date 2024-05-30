@@ -8,6 +8,10 @@
     <script defer src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
   </head>
 
   <body>
@@ -19,7 +23,7 @@
     </header>
 
     <!--ชื่อเรื่อง-->
-    <section class="hidden">
+    <section class="">
       <div class="wrapper">
         <div class="first-title">
           <h1 class="section0">จักรวาลหมอลำ — ขุมพลังทางเศรษฐกิจจากภาคอีสาน</h1>
@@ -900,46 +904,107 @@
         </div>
       </div>
     </section>
+
+    <!-- section 9-->
+    <section id="trigger">
+      <div class="animate">
+        
+        <img src="asset/testtranform/test-1.png" alt="Your Image">
+      </div>
+    </section>
+
+        <!-- section 8 engagement-->
+    <section class="hidden">
+          <div class="wrapper">
+            <p>
+              และสำหรับใครที่อ่านบทความชิ้นนนี้แล้วสนใจที่ะอยากจะลองไปเปิดประสบการณ์การดูหมอลำสามารถค้นหาว่าในวันนี้มีหมอลำที่ไหนบ้างที่กำลังจะแสดงอยู่ในบริเวณพื้นที่ใกล้ๆ
+              บ้านของท่าน สามารถดูได้จากแผนที่ด้านล่างนี้
+            </p>
+            <div
+              style="
+                text-decoration: none;
+                overflow: hidden;
+                max-width: 100%;
+                width: 500px;
+                height: 500px;
+              "
+            >
+              <div
+                id="gmap-canvas"
+                style="height: 100%; width: 100%; max-width: 100%"
+              >
+                <iframe
+                  style="height: 100%; width: 100%; border: 0"
+                  frameborder="0"
+                  src="https://www.google.com/maps/embed/v1/place?q=thailand&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                ></iframe>
+              </div>
+              <a
+                class="from-embedmap-code"
+                href="https://www.bootstrapskins.com/themes"
+                id="grab-map-authorization"
+                >premium bootstrap themes</a
+              ><style>
+                #gmap-canvas img.text-marker {
+                  max-width: none !important;
+                  background: none !important;
+                }
+                img {
+                  max-width: none;
+                }
+              </style>
+            </div>
+            <p>
+              และหากคณะหมอลำคณะไหนต้องการที่จะให้คิวงานของท่านแสดงในแผนที่นี้เพื่อเชิญชวนพ่อแม่พี่น้องเข้าไปดูการแสดงของท่านสารการส่งคิวงานในฤดูกาลแสดงของท่านมาได้ผ่านแบบฟอร์มด้านล่างนี้
+            </p>
+            <div class="form-container-morlum">
+              <div class="wrapper-form">
+                <form class="form-signin">
+                  <h2 class="form-signin-heading">ส่งข้อมูลของท่าน</h2>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    placeholder="Email Address"
+                    required=""
+                    autofocus=""
+                  />
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+                    required=""
+                  />
+                  <button class="" type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
+    
+    <footer>
+      <section id="footer">
+        <footer>© สำนักการมีส่วนร่วมสาธารณะ/ไทยพีบีเอส</footer>
+      </section>
+    </footer>
+
   </body>
 
-  <section>
-    <!--popup-modal-audience secmentation-->
-    <div class="wrapper">
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <!-- The Close Button -->
-        <span class="close">&times;</span>
-        <!-- Modal Content (The Image) -->
-        <img class="modal-content" id="img01" />
-        <!-- Modal Header (h4 text) -->
-        <h4 id="modalHeader"></h4>
-        <!-- Modal Caption (Image Text) -->
-        <div id="caption"></div>
-      </div>
-
-      <!-- Trigger the Modal with these Images -->
-      <img
-        class="myImg"
-        src="asset/popup-image-1.png"
-        alt="Image Description 1"
-        data-header="Header 1"
-        style="width: 100%; max-width: 300px"
-      />
-      <img
-        class="myImg"
-        src="asset/popup-image-1.png"
-        alt="ส่วนใหญ่เป็นเพศหญิงหรือเพศที่ 3 มีอายุ 40-65 ปี ส่วนใหญ่ยังอยู่ในวัยทำงานหรือทำธุรกิจส่วนตัว บางส่วนเกษียณอายุแล้ว ในด้านฐานะทางการเงินไม่มีภาระค่าใช้จ่ายมากนัก ลูกหลานสามารถดูแลตัวเองได้แล้ว หรือลูกหลานสามารถให้การสนับสนุนเรื่องทุนทรัพย์ในการมาดูหมอลำได้ แม่ยกหมอลำมีการรวมกลุ่มกันเวลามาชมหมอลำ มักจะมาหาศิลปินหลังเวที โดยนำอาหารหรือของฝากมาให้ศิลปิน มีการให้มาลัยกับศิลปินหรือบางครั้งมีการ รวบรวมเงินเพื่อให้ได้มาลัยพวงใหญ่ และคล้องมาลัยศิลปินในนามของกลุ่มแม่ยก ในส่วนของความชื่นชอบการแสดงของหมอลำนั้นกลุ่มแม่ยกชอบดูลำเรื่องต่อกลอนและช่วงคอนเสิร์ต โดยจะชอบฉากหรือเพลงที่ศิลปินที่ตนเองชื่นชอบแสดงมากเป็นพิเศษ"
-        data-header="แม่ยกหน้าเวทีกลุ่มแม่ยกหน้าเวที"
-        style="width: 100%; max-width: 300px"
-      />
-    </div>
-  </section>
-
-  <footer>
-    <section id="footer">
-      <footer>© สำนักการมีส่วนร่วมสาธารณะ/ไทยพีบีเอส</footer>
-    </section>
-  </footer>
+  <script>
+    // Initialize ScrollMagic controller
+    var controller = new ScrollMagic.Controller();
+  
+    // Create a scene
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger", // Element that triggers the animation
+        triggerHook: 0.5, // Trigger the animation at the middle of the viewport
+        duration: "100%", // Duration of the scene
+    })
+    .setClassToggle(".animate", "active") // Add or remove class to trigger animation
+    .addTo(controller); // Add the scene to the controller
+  </script>
+  
 
   <!--backup <section class="hidden">
       <h2>มันต้องเวิร์คสิว่ะ</h2>

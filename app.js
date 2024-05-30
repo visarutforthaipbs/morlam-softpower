@@ -67,3 +67,33 @@ imgs.forEach(function (img) {
 span.onclick = function () {
   modal.style.display = "none";
 };
+
+// Add animation
+var targetSection = document.getElementById("targetSection");
+var transformElement = document.getElementById("transformElement");
+
+var observer = new IntersectionObserver(function (entries) {
+  // If the target section is no longer intersecting with the viewport, move the image off the screen
+  if (!entries[0].isIntersecting) {
+    transformElement.style.transform = "translateX(-100%)";
+  }
+  // If the target section is partially or fully in view, move the image onto the screen
+  else {
+    transformElement.style.transform = "translateX(0)";
+  }
+});
+
+// Start observing the target section
+observer.observe(targetSection);
+
+// Initialize ScrollMagic controller
+var controller = new ScrollMagic.Controller();
+
+// Create a scene
+var scene = new ScrollMagic.Scene({
+  triggerElement: "#trigger", // Element that triggers the animation
+  triggerHook: 0.5, // Trigger the animation at the middle of the viewport
+  duration: "100%", // Duration of the scene
+})
+  .setClassToggle("#animate", "fade-in") // Add or remove class to trigger animation
+  .addTo(controller); // Add the scene to the controller
