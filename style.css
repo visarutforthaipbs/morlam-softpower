@@ -272,7 +272,7 @@ button,
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   background: var(--card-background-color);
   font-size: 1rem;
@@ -287,6 +287,7 @@ button,
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 10px;
 }
 
 /* Timeline styling */
