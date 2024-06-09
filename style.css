@@ -861,6 +861,7 @@ input[type="password"] {
   height: 0;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
+  background-color: #c6ae73;
 }
 
 .iframe-container iframe {
