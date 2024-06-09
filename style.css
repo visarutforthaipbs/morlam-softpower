@@ -604,7 +604,7 @@ input[type="password"] {
 }
 
 .datavis-embed {
-  display: block;
+  display: absolute;
   text-align: center;
 }
 
