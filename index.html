@@ -641,45 +641,34 @@
         และสำหรับใครที่อ่านบทความชิ้นนนี้แล้วสนใจที่ะอยากจะลองไปเปิดประสบการณ์การดูหมอลำสามารถค้นหาว่าในวันนี้มีหมอลำที่ไหนบ้างที่กำลังจะแสดงอยู่ในบริเวณพื้นที่ใกล้ๆ
         บ้านของท่าน สามารถดูได้จากแผนที่ด้านล่างนี้
       </p>
-      <div style="
-                text-decoration: none;
-                overflow: hidden;
-                max-width: 100%;
-                width: 500px;
-                height: 500px;
-              ">
-        <div id="gmap-canvas" style="height: 100%; width: 100%; max-width: 100%">
-          <iframe style="height: 100%; width: 100%; border: 0" frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?q=thailand&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-        </div>
-        <a class="from-embedmap-code" href="https://www.bootstrapskins.com/themes" id="grab-map-authorization">premium
-          bootstrap themes</a>
-        <style>
-          #gmap-canvas img.text-marker {
-            max-width: none !important;
-            background: none !important;
-          }
-
-          img {
-            max-width: none;
-          }
-        </style>
+      <div class="iframe-container">
+        <iframe src="https://visarutforthaipbs.github.io/morlum-cultural-capital-map/" frameborder="0"
+          allowfullscreen></iframe>
       </div>
       <p>
         และหากคณะหมอลำคณะไหนต้องการที่จะให้คิวงานของท่านแสดงในแผนที่นี้เพื่อเชิญชวนพ่อแม่พี่น้องเข้าไปดูการแสดงของท่านสารการส่งคิวงานในฤดูกาลแสดงของท่านมาได้ผ่านแบบฟอร์มด้านล่างนี้
       </p>
-      <div class="form-container-morlum">
-        <div class="wrapper-form">
-          <form class="form-signin">
-            <h2 class="form-signin-heading">ส่งข้อมูลของท่าน</h2>
-            <input type="text" class="form-control" name="username" placeholder="Email Address" required=""
-              autofocus="" />
-            <input type="password" class="form-control" name="password" placeholder="Password" required="" />
-            <button class="" type="submit">Login</button>
-          </form>
-        </div>
+      <div class="iframe-container">
+        <iframe src="https://visarutforthaipbs.github.io/morlum-culture-capital-form/" frameborder="0"
+          allowfullscreen></iframe>
       </div>
     </div>
+
+    <script>
+      // Function to toggle the overlay
+      function toggleOverlay() {
+        const overlay = document.getElementById('overlay');
+        if (overlay.style.display === 'block') {
+          overlay.style.display = 'none';
+        } else {
+          overlay.style.display = 'block';
+        }
+      }
+
+      // Optionally, you can add event listeners or functions to toggle the overlay
+      // Example: Show the overlay after 2 seconds
+      setTimeout(toggleOverlay, 2000);
+    </script>
   </section>
 
   <!--footer-->
