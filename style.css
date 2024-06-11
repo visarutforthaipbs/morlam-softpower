@@ -6,10 +6,13 @@ body {
   background-color: var(--background-color);
   color: var(--tex-color-main);
   font-family: "IBM Plex Sans Thai", sans-serif;
-  font-size: 1.5rem; /* Default font size */
-  line-height: 1.5; /* Comfortable line height for readability */
+  font-size: 1.5rem;
+  line-height: 1.5;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 :root {
@@ -20,9 +23,9 @@ body {
   --content-width: 60%;
   --tex-color-main: #282828;
   --h3-color-text: #7dad7d;
+  --mainfont: "IBM Plex Sans Thai", sans-serif;
 }
 
-/* Anchor tag styling */
 a {
   text-decoration: wavy;
   color: var(--card-background-color);
@@ -32,7 +35,6 @@ a:hover {
   color: var(--background-color);
 }
 
-/* Section and content layout */
 .section,
 .header1 {
   display: grid;
@@ -46,16 +48,13 @@ a:hover {
 }
 
 .header1 {
-  .header1 {
-    height: 5vh; /* Responsive height based on viewport height */
-    padding-top: 0.5rem; /* Consistent padding */
-  }
+  height: 5vh;
+  padding-top: 0.5rem;
 }
 
 .wrapper {
-  /* Add your styles for the wrapper div here */
-  max-width: 1200px; /* For example, setting a maximum width */
-  margin: 0 auto; /* To center the wrapper horizontally */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   min-height: 100vh;
   overflow: visible;
@@ -75,7 +74,6 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Typography */
 h1,
 h2 {
   text-align: center;
@@ -151,12 +149,6 @@ h3 {
   line-height: 1.2rem;
 }
 
-.boxp {
-  ont-size: 1rem;
-  line-height: 1.2rem;
-  color: var(--background-color);
-}
-
 .setion1quote {
   font-size: 2rem;
   text-align: left;
@@ -173,7 +165,6 @@ p {
   color: var(--card-background-color);
 }
 
-/* Grid layouts */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -208,7 +199,6 @@ p {
   border-radius: 20px;
 }
 
-/* Image styling */
 img {
   max-width: 30vh;
   height: 30vh;
@@ -221,7 +211,6 @@ img {
   box-shadow: var(--shadow-color);
 }
 
-/* Animation */
 .wiggling-image {
   animation: wiggleImage 1s ease-in-out infinite alternate;
 }
@@ -235,7 +224,6 @@ img {
   }
 }
 
-/* Animation */
 .wiggling-imag-2 {
   animation: wiggleImage-2 1s ease-in-out infinite alternate;
 }
@@ -249,7 +237,6 @@ img {
   }
 }
 
-/* Button styling */
 button,
 .playButton {
   appearance: none;
@@ -268,7 +255,6 @@ button,
   border: none;
 }
 
-/* Card styling */
 .card {
   display: flex;
   flex-direction: column;
@@ -290,7 +276,6 @@ button,
   padding-bottom: 10px;
 }
 
-/* Timeline styling */
 .timeline {
   display: flex;
   overflow-x: auto;
@@ -320,7 +305,6 @@ button,
   }
 }
 
-/* Hidden and show classes for animations */
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -340,13 +324,11 @@ button,
   transform: translateX(0);
 }
 
-/* Flex container */
 .container {
   display: flex;
   justify-content: center;
 }
 
-/* Logos animation delay */
 .logos .logo:nth-child(2) {
   transition-delay: 200ms;
 }
@@ -359,18 +341,19 @@ button,
   transition-delay: 600ms;
 }
 
-/* Modal styling */
+/* Modal Popup */
 .modal {
-  display: none;
-  position: relative;
-  z-index: 1;
-  padding-top: 100px;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(69, 88, 156, 0.9); /* Black background with opacity */
+  padding-top: 60px; /* Add some padding at the top */
+  box-sizing: border-box;
 }
 
 .close {
@@ -395,270 +378,35 @@ button,
   display: block;
   width: 80%;
   max-width: 700px;
-}
-
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-height: 150px;
-  overflow: auto;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Additional classes for positioning */
-.first-title {
-  position: relative;
-  margin-top: 200px;
-}
-
-.morlum-pic {
-  position: absolute;
-  top: -180px;
-  left: 590px;
-}
-
-.section-flow-2 {
-  position: relative;
-  top: -560px;
-  left: 180px;
-}
-
-.title-credit {
-  text-align: center;
-}
-
-/*footer*/
-
-.main-footer {
-  padding: 70px 0;
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--card-background-color);
-}
-
-.main-footer ul {
-  list-style: none;
-}
-
-.main-footer h1 {
-  font-size: 22px;
-  line-height: 117%;
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-weight: 500;
-}
-
-.main-footer h2 {
-  color: #ffffff;
-  font-weight: 500;
-}
-
-.main-footer ul li a {
-  color: #ffffffcc;
-  text-decoration: none;
-}
-
-footer {
-  background-color: var(--card-background-color);
-  font-size: 17px;
-  padding: 15px 5px;
-  color: #ffffff;
-  text-align: center;
-}
-
-footer a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.logoinfo p {
-  color: #6eb981;
-  font-size: 17px;
-  margin-top: 5px;
-}
-
-.contact-details {
-  margin-top: 20px;
-}
-
-.contact-details li {
-  list-style: none;
-  margin: 10px 0;
-}
-
-.contact-details li a {
-  text-decoration: none;
-  color: #f1f1f1;
-}
-
-.contact-details .fa {
-  color: #f1f1f1;
-  margin-right: 10px;
-}
-
-.sociallogos {
-  padding: 20px 0;
-}
-
-.sociallogos .logobox a {
-  padding: 0 10px;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 22px;
-}
-
-.com ul li {
-  padding: 5px 0;
-}
-
-/* Media queries */
-@media only screen and (max-width: 749px) {
-  .main-footer {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .info {
-    padding: 20px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-footer {
-    grid-template-columns: 1fr;
-  }
-  .sociallogos {
-    padding: 20px 0;
-  }
-  .com {
-    padding: 20px 0;
-  }
-}
-
-.feature-image {
-  display: block;
-  max-width: 50%;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  justify-content: center;
-}
-
-.img-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 20px 10px;
-}
-
-/* form mock-up */
-@import "bourbon";
-
-.wrapper-form {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.form-signin {
-  max-width: 450px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: var(--card-background-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.form-signin-heading,
-.checkbox {
-  margin-bottom: 30px;
-}
-
-.checkbox {
-  font-weight: normal;
-}
-
-.form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  @include box-sizing(border-box);
-
-  &:focus {
-    z-index: 2;
-  }
-}
-
-input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-input[type="password"] {
-  margin-bottom: 20px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.datavis-embed {
-  display: absolute;
-  text-align: center;
-}
-
-/* testing popup modul 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(69, 88, 156, 0.9);
-  border-radius: 20px;
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: auto;
-  max-width: 700px;
-}
-
-#modalHeader {
-  display: block;
-  text-align: center !important;
-  z-index: 100;
-  color: var(--h3-color-text);
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-  overflow: visible;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content,
-#caption {
+  max-height: 80%; /* Constrain height */
   animation-name: zoom;
   animation-duration: 0.6s;
   font-size: 18px;
+  overflow: auto; /* Enable scroll inside modal if needed */
+  border-radius: 30px;
+  padding: 20px; /* Add padding */
+}
+
+#modalHeader {
+  display: block; /* Ensure the element is a block-level element */
+  text-align: center; /* Center the text horizontally */
+  margin: 0 auto; /* Center the element itself if it has a fixed width */
+  color: var(--h3-color-text);
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-size: 18px;
+  width: 80%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes zoom {
@@ -670,7 +418,6 @@ input[type="password"] {
   }
 }
 
-/* The Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -698,10 +445,9 @@ input[type="password"] {
   cursor: pointer;
 }
 
-/* Add Animation */
 #transformElement {
   transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%); /* Initially move the image off-screen */
+  transform: translateX(-100%);
 }
 
 .animate img {
@@ -752,8 +498,6 @@ input[type="password"] {
   padding: 10px;
 }
 
-/* money-drop */
-/* main container */
 .container-money {
   top: 0px;
   width: 100%;
@@ -761,7 +505,6 @@ input[type="password"] {
   min-height: 800px;
   position: absolute;
   left: 0%;
-  /* 	background:#1E1E20 url(http://premiumcoding.com/CSSTricks/fallingLeaves/autumn.jpg) center top no-repeat; */
   background-size: contain;
 }
 
@@ -774,7 +517,6 @@ input[type="password"] {
   background: url("asset/new-ci/money-drop-20.svg");
   background-size: contain;
   background-repeat: no-repeat;
-
   -webkit-animation: loader 10s infinite linear;
   -moz-animation: loader 10s infinite linear;
 }
@@ -812,21 +554,18 @@ input[type="password"] {
     width: 80px;
     height: 80px;
     opacity: 1;
-
     -webkit-transform: translate(0, 0px) rotateZ(0deg);
   }
   75% {
     width: 80px;
     height: 80px;
     opacity: 1;
-
     -webkit-transform: translate(100px, 600px) rotateZ(270deg);
   }
   100% {
     width: 80px;
     height: 80px;
     opacity: 0;
-
     -webkit-transform: translate(150px, 800px) rotateZ(360deg);
   }
 }
@@ -835,21 +574,18 @@ input[type="password"] {
     width: 80px;
     height: 80px;
     opacity: 1;
-
     -webkit-transform: translate(0, 0px) rotateZ(0deg);
   }
   75% {
     width: 80px;
     height: 80px;
     opacity: 1;
-
     -webkit-transform: translate(100px, 600px) rotateZ(270deg);
   }
   100% {
     width: 80px;
     height: 80px;
     opacity: 0;
-
     -webkit-transform: translate(150px, 800px) rotateZ(360deg);
   }
 }
@@ -859,7 +595,7 @@ input[type="password"] {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   overflow: hidden;
   background-color: #c6ae73;
 }
@@ -871,4 +607,95 @@ input[type="password"] {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* D3 Bubble Chart */
+#viz_container {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Use full viewport height */
+  margin: 0 auto;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0px 0px 3px 0px #e6e6e6;
+  border: 1px solid #0072bc;
+  border-radius: 4px;
+  pointer-events: none;
+  display: none;
+  z-index: 1000;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.solid {
+  stroke: white;
+  stroke-width: 0.2;
+}
+
+.dashed {
+  stroke: white;
+  stroke-width: 0.2;
+  stroke-dasharray: 1, 0.5;
+}
+
+.dotted {
+  stroke: white;
+  stroke-width: 0.2;
+  stroke-dasharray: 0.2, 0.5;
+}
+
+.dashed-dot {
+  stroke: white;
+  stroke-width: 0.2;
+  stroke-dasharray: 1, 0.5, 0.2, 0.5;
+}
+
+path {
+  fill: var(--card-background-color);
+  opacity: 0.9;
+}
+
+circle {
+  fill: var(--card-background-color);
+}
+
+footer {
+  background-color: var(--card-background-color);
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center; /* Ensure text inside is centered */
+  padding: 20px;
+  color: white; /* Ensure the text color contrasts with the background */
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%; /* Ensure the footer spans the full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#credit {
+  position: absolute; /* Position it absolutely within #viz_container */
+  top: 1100px; /* Adjust the top position as needed */
+  left: 860px; /* Adjust the left position as needed */
+  background: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Optional: Semi-transparent background */
+  padding: 10px; /* Optional: Add padding for better spacing */
+  font-size: 14px; /* Adjust font size as needed */
+  z-index: 1000; /* Ensure it appears above other elements */
+  border-radius: 4px; /* Optional: Add rounded corners */
 }
