@@ -117,6 +117,7 @@ if (!treemapContainer) {
           );
         })
         .attr("dy", "0.35em")
+        .style("fill", "white") // Add this line to set the text color to white
         .text(function (d) {
           var boxWidth = d.x1 - d.x0;
           var charsToShow = Math.floor(boxWidth / 8);

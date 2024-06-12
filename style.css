@@ -35,6 +35,10 @@ a:hover {
   color: var(--background-color);
 }
 
+.background-cover {
+  width: 100%;
+}
+
 .section,
 .header1 {
   display: grid;
@@ -206,6 +210,7 @@ img {
 
 .imgcard {
   width: 100%;
+  max-width: 100%;
   height: fit-content;
   border-radius: 20px;
   box-shadow: var(--shadow-color);
@@ -480,23 +485,25 @@ button,
 
 .morlum-pic-1 {
   position: absolute;
-  top: 100px;
-  left: 170px;
+  top: 5rem;
+  left: 4rem;
+  opacity: 0.5;
 }
 
 #khean-1 {
-  width: 250px;
+  width: 150px;
   height: 600px;
 }
 
 .morlum-pic-2 {
   position: absolute;
-  top: 100px;
-  left: 1500px;
+  top: 5rem;
+  left: 83rem;
+  opacity: 0.5;
 }
 
 #khean-2 {
-  width: 250px;
+  width: 150px;
   height: 600px;
   transform: rotateZ(-10deg);
 }
@@ -705,7 +712,7 @@ footer {
 
 #credit {
   position: absolute; /* Position it absolutely within #viz_container */
-  top: 1100px; /* Adjust the top position as needed */
+  top: 1000px; /* Adjust the top position as needed */
   left: 860px; /* Adjust the left position as needed */
   background: rgba(
     255,
@@ -777,11 +784,19 @@ footer {
 
 #credit-treemap {
   position: absolute;
-  top: 85%;
+  top: 83%;
   left: 75%;
   background: rgba(255, 255, 255, 0.5);
   padding: 10px;
   font-size: 14px;
   z-index: 1000;
   border-radius: 4px;
+}
+
+/*treemap*/
+.viz {
+  border: 1px solid black;
+  width: 100%;
+  height: 80vh;
+  position: relative;
 }

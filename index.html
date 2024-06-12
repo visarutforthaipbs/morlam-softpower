@@ -8,20 +8,19 @@
   <!--icon lirbary-->
   <link rel="icon" type="image/x-icon" href="asset/new-ci/icon-circle-background.svg">
   <!-- Include D3 and other libraries -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://d3js.org/topojson.v1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-geo@3.2.0/dist/d3-geo.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4.0.0/dist/d3-geo-projection.min.js"></script>
-  <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js" defer></script>
+  <script src="https://d3js.org/topojson.v1.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-geo@3.2.0/dist/d3-geo.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4.0.0/dist/d3-geo-projection.min.js" defer></script>
+  <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" defer></script>
   <!--stylesheet-->
   <link rel="stylesheet" href="style.css">
   <!--JS-->
-  <script defer src="app.js"></script>
-  <script defer src="bubbleMap.js"></script>
-  <script dfer src="audioControls.js"></script>
-  <script defer src="treeMap.js"></script>
-
+  <script defer src="done-js/app.js"></script>
+  <script defer src="done-js/audioControls.js"></script>
+  <script defer src="done-js/bubbleMap.js"></script>
+  <script defer src="done-js/treeMap.js"></script>
 </head>
 
 <body>
@@ -97,10 +96,10 @@
           </div>
         </div>
 
-        <!--sound
-              <div class="section-flow-1 observe-section">
-                <audio id="section-audio" src="sound/หมอลำซิ่ง.mp4"></audio>
-              </div> -->
+
+        <div class="section-flow-1 observe-section">
+          <audio id="section-audio" src="sound/หมอลำซิ่ง.mp4"></audio>
+        </div>
       </div>
 
       <!--can and pin-->
@@ -552,76 +551,8 @@
         ที่มาจากพลังสร้างสรรค์ของชาวอีสานแต่อย่าลืมว่าภาคอีสานนั้นก็ยังมักจะมีผลิตภัณฑ์ทางวัฒนธรรมอื่นๆ
         ที่ให้เห็นกันอยู่เนืองๆ ยกตัวอย่างเช่น
       </p>
-      <div>
-        <ul>
-          <p>ภาพยนตร์</p>
-          <li>
-            นาคี / สร้างกระแสความเชื่อพญานาค / กระตุ้นการท่องเที่ยวจังหวัด /
-            รายได้หนัง 417 ล้านบาท
-          </li>
-          <li>
-            แหยม ยโสธร / เป็นหนังแนวอีสานที่ทำให้หลายคนสนใจ /
-            เสื้อผ้ากลายเป็นแฟชั่นที่ทำให้หลายคนแต่งตาม / รายได้หนัง 240
-            ล้านบาท
-          </li>
-          <li>
-            ส่ม ภัค เสี่ยน / ชูส้มผักเสี้ยน อาหารอีสาน / รายได้หนัง 210
-            ล้านบาท
-          </li>
-          <li>
-            จักรวาลไทบ้าน / กระแสไทบ้านฟีเวอร์ /
-            มาพร้อมเพลงประกอบหนังที่ดังทะลุ 100 ล้าน / รายได้หนังรวมกว่า 1,000
-            ล้านบาท
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <p>เพลง</p>
-          <li>
-            คำแพง / ศิลปิน แซค ชุมแพ / เพลงลูกทุ่งยอดวิวสูงสุดของไทย /
-            ยอดวิวกว่า 500 ล้านครั้ง
-          </li>
-          <li>
-            คู่คอง / ศิลปิน ก้อง ห้วยไร่ /
-            เพลงประกอบละครที่มียอดวิวสูงสุดในไทย / ยอดวิวกว่า 490 ล้านครั้ง
-          </li>
-          <li>
-            ผู้สาวขาเลาะ / ศิลปิน ลำไย ไหทองคำ /
-            เพลงอีสานอินดี้ที่ประสบความสำเร็จ / ยอดวิวกว่า 380 ล้านครั้ง
-          </li>
-          <li>
-            เต่างอย / ศิลปิน จินตรา พูนลาภ /
-            เพลงอีสานที่ทำให้หลายคนรู้จักพญาเต่างอย จ.สกลนคร / ยอดวิวกว่า 140
-            ล้านครั้ง
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <p>อาหาร</p>
-          <li>ส้มตำ / อาหารที่ดีที่สุดในโลก อันดับ 46 ประจำปี 2563</li>
-          <li>
-            ปลาร้า ปลาแดก / สินค้าแปรรูปอีสานที่มีมูลค่าทางการตลาดประมาณ 1,000
-            ล้านบาท
-          </li>
-          <li>
-            ข้าวหอมมะลิ 105 / ชนะเลิศ World Best Rice Award 2020
-            พันธุ์ข้าวที่ดีที่สุดในโลก
-          </li>
-          <li>
-            แมลงอีสาน / อาหารแห่งอนาคต มีมูลค่าทางการตลาดประมาณ 3,000 ล้านบาท
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <p>วัฒนธรรมอื่นๆ</p>
-          <li>ผ้าขาวม้า</li>
-          <li>สโมสรฟุตบอล</li>
-          <li>หมอลำ</li>
-          <li>ปราสาทหินโบราณ</li>
-        </ul>
+      <div class="iframe-container">
+        <iframe src="https://visarutforthaipbs.github.io/softpower-node-map/" frameborder="0" allowfullscreen></iframe>
       </div>
       <p>
         หมอลำและหลากหลายผลิตภัณฑ์วัฒนธรรมคงที่มาจากพลังสร้างสรรค์ของชาวอีสาน
