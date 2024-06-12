@@ -736,36 +736,52 @@ footer {
   text-indent: 5px;
 }
 
-/*overlay*/
-/* Ensure the parent div has position: relative to position the overlay correctly */
-.parent {
-  position: relative;
-  width: auto; /* Example width */
-  height: auto; /* Example height */
-  border: 1px solid #ccc;
-}
-
-/* Style the content as necessary */
-.content {
-  padding: 10px;
-}
-
-/* Overlay styling */
-.overlay-for-mockup {
-  position: absolute; /* Position it absolutely relative to .parent */
-  top: 0;
-  left: 0;
+/*treemap*/
+#treemap-container {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  z-index: 1000; /* High z-index to be on top */
-  display: none; /* Initially hidden */
+  height: 90vh;
+  position: relative;
+  margin: 0px auto;
+  padding: 0 0 60px 0;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.node {
+  border: solid 1px white;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+  cursor: default;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  font-weight: 600;
+}
+.node text {
+  pointer-events: none;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  color: white;
 }
 
-/* Optional: Add transition effect */
-.overlay-for-mockup.fade-in {
-  display: block;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;
+.treemap-tooltip {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0px 0px 3px 0px #e6e6e6;
+  border: 1px solid #0072bc;
+  border-radius: 4px;
+  pointer-events: none;
+  display: none;
+  z-index: 1000;
+}
+
+#credit-treemap {
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 14px;
+  z-index: 1000;
+  border-radius: 4px;
 }

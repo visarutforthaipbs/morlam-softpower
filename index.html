@@ -20,6 +20,8 @@
   <script defer src="app.js"></script>
   <script defer src="bubbleMap.js"></script>
   <script dfer src="audioControls.js"></script>
+  <script defer src="treeMap.js"></script>
+
 </head>
 
 <body>
@@ -476,11 +478,11 @@
           <li>มูลค่าทางเศรษฐกิจที่มาจากผู้จัดงานหรือผู้ว่าจ้าง</li>
           <li>มูลค่าทางเศรษฐกิจที่มาจากคณะหมอลำ</li>
         </ol>
-        <div class="iframe-container">
-          <iframe src="https://visarutforthaipbs.github.io/temporary-morlum-treemap/" frameborder="0"
-            allowfullscreen></iframe>
-        </div>
       </div>
+      <div id="treemap-container"></div>
+      <div id="credit-treemap"> <a
+          href="https://doe.go.th/prd/overseas/statistic/param/site/149/cat/81/sub/0/pull/category/view/list-label">ผศ.ดร.ศิวาพร
+          ฟองทอง และคณะ (2565)</a> </div>
       <p>
         และสำหรับมูลค่าทางเศรษฐกิจที่เกิดขึ้นมาจากวงการหมอลำนั้น
         ก็ไม่ได้เพียงแค่กระจายอยู่ในอุตสาหกรรมหมอลำเท่านั้น
@@ -513,7 +515,7 @@
       <div id="viz_container"></div>
       <div id="credit"> <a
           href="https://doe.go.th/prd/overseas/statistic/param/site/149/cat/81/sub/0/pull/category/view/list-label">ข้อมูลจาก:
-          กรมบริหารแรงงานไทยไปต่างประเทศ 2567</a></div>
+          กรมบริหารแรงงานไทยไปต่างประเทศ 2567</a> </div>
     </div>
 
     <!--section 6 ศักยภาพของหมอลำ - ต้นทุนทางวัฒนธรรมของหมอลำอีสาน-->
@@ -653,22 +655,6 @@
           allowfullscreen></iframe>
       </div>
     </div>
-
-    <script>
-      // Function to toggle the overlay
-      function toggleOverlay() {
-        const overlay = document.getElementById('overlay');
-        if (overlay.style.display === 'block') {
-          overlay.style.display = 'none';
-        } else {
-          overlay.style.display = 'block';
-        }
-      }
-
-      // Optionally, you can add event listeners or functions to toggle the overlay
-      // Example: Show the overlay after 2 seconds
-      setTimeout(toggleOverlay, 2000);
-    </script>
   </section>
 
   <!--footer-->
