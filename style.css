@@ -46,6 +46,17 @@ a:hover {
   align-content: center;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Adds space between images */
+}
+
+.header-img {
+  max-width: 100px; /* Adjust as necessary */
+  height: auto;
+}
 .section {
   min-height: 100vh;
   max-width: 60vw;
