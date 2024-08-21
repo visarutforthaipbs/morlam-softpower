@@ -497,7 +497,7 @@ button,
 .morlum-pic-1 {
   position: absolute;
   top: 5rem;
-  left: 4rem;
+  left: 16rem;
   opacity: 0.5;
 }
 
@@ -795,7 +795,7 @@ footer {
 
 #credit-treemap {
   position: absolute;
-  top: 83%;
+  top: 85%;
   left: 75%;
   background: rgba(255, 255, 255, 0.5);
   padding: 10px;
